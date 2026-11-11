@@ -34,6 +34,17 @@ class LazyLiteLLM:
         if VERBOSE:
             print("Loading litellm...")
 
+        # litellm looks up LITELLM_LOG with getattr(logging, ...) at import
+        # time and crashes on values with surrounding whitespace (like
+        # "DEBUG "), so normalize it before importing.
+        log_level = os.environ.get("LITELLM_LOG")
+        if log_level is not None:
+            log_level = log_level.strip()
+            if log_level:
+                os.environ["LITELLM_LOG"] = log_level
+            else:
+                del os.environ["LITELLM_LOG"]
+
         self._lazy_module = importlib.import_module("litellm")
 
         self._lazy_module.suppress_debug_info = True
