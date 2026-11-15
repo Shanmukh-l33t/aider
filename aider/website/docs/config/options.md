@@ -202,8 +202,8 @@ Use architect edit format for the main chat
 Environment variable: `AIDER_ARCHITECT`  
 
 ### `--auto-accept-architect`
-Enable/disable automatic acceptance of architect changes (default: True)  
-Default: True  
+Enable/disable automatic acceptance of architect changes (default: False)  
+Default: False  
 Environment variable: `AIDER_AUTO_ACCEPT_ARCHITECT`  
 Aliases:
   - `--auto-accept-architect`

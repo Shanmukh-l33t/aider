@@ -26,6 +26,7 @@ cog.out(text)
 
 ### main branch
 
+- `--auto-accept-architect` now defaults to `False`, so architect mode asks before applying its edits; pass `--auto-accept-architect`, set `auto-accept-architect: true` in `.aider.conf.yml`, or use `--yes-always` to restore automatic application.
 - Added support for Claude 4.5/4.6 models and updated model aliases (sonnet/haiku/opus).
 - Expanded Gemini model support with 2.5 Flash and Flash‑Lite, added Gemini 3 preview models, and updated the flash alias to gemini/gemini-flash-latest.
 - Added DeepSeek Reasoner model and updated DeepSeek model metadata with costs and prompt caching.

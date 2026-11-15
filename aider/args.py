@@ -178,8 +178,8 @@ def get_parser(default_config_files, git_root):
     group.add_argument(
         "--auto-accept-architect",
         action=argparse.BooleanOptionalAction,
-        default=True,
-        help="Enable/disable automatic acceptance of architect changes (default: True)",
+        default=False,
+        help="Enable/disable automatic acceptance of architect changes (default: False)",
     )
     group.add_argument(
         "--weak-model",

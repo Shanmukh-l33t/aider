@@ -337,7 +337,7 @@ class Coder:
         total_tokens_received=0,
         file_watcher=None,
         auto_copy_context=False,
-        auto_accept_architect=True,
+        auto_accept_architect=False,
     ):
         # Fill in a dummy Analytics if needed, but it is never .enable()'d
         self.analytics = analytics if analytics is not None else Analytics()
